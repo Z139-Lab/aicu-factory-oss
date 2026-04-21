@@ -1,20 +1,51 @@
-\# IEEE-2383 Critical Edge
+\# AICU Factory OSS
 
 
 
-This repository contains simulation data for a near-discontinuous
-
-collapse transition in the IEEE-2383 system.
+Local-first orchestration core for AI experiments, multi-agent workflows, and reproducible research pipelines.
 
 
 
-A small load increase (\~29.05 → 29.10 MW) produces a full collapse.
+\## Features
+
+\- Job queue
+
+\- Worker execution
+
+\- Pipeline registry
+
+\- Z-Orchestrator presets
+
+\- Cost guard
+
+\- Artifact generation
 
 
 
-\## Relation
+\## Quick Start
 
-Part of bounded-criticality research:
+```bash
 
-https://github.com/Z139-Lab
+python -m venv .venv
+
+.\\.venv\\Scripts\\activate
+
+pip install -r requirements.txt
+
+copy .env.example .env
+
+python -m aicu\_factory.cli init
+
+python -m aicu\_factory.cli add-demo
+
+python -m aicu\_factory.cli run
+
+Relation
+
+This repository is part of a broader bounded-criticality research ecosystem, including reproducible experiment and paper packages.
+
+License
+
+MIT
+
 
