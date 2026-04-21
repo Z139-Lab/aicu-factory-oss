@@ -1,0 +1,24 @@
+{
+  "experiment_id": "v18_dag_controlled",
+  "model": "gpt-4-turbo",
+  "topology": "dag",
+  "stress": 0.95,
+  "runs": 40,
+  "collapse_prob": 0.25,
+  "cascade_size_mean": 0.45,
+  "cascade_size_std": 0.12,
+  "ci_95": [0.15, 0.38],
+  "config": {
+    "memory_alpha": 0.6,
+    "retry_limit": 3
+  },
+  "environment": {
+    "timestamp": "2026-04-21T00:00:00Z",
+    "sdk_version": "aicu-factory-oss-0.1.0"
+  },
+  "validity": {
+    "cv": 0.21,
+    "failed_runs": 2,
+    "quality_flag": "OK"
+  }
+}

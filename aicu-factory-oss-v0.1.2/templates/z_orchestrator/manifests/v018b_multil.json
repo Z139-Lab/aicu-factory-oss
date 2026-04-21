@@ -1,0 +1,42 @@
+{
+  "run_meta": {
+    "experiment_id": "v018b_multiL_scan",
+    "z_ref": 1.39,
+    "run_family": "v018_series"
+  },
+  "parameters": {
+    "L_grid": [
+      32000,
+      64000,
+      128000,
+      320000
+    ],
+    "stress_grid": [
+      0.8,
+      0.85,
+      0.9,
+      0.95
+    ],
+    "runs": 20
+  },
+  "safety_boundaries": {
+    "allow_softening": true,
+    "allow_fallback_L": true,
+    "forbidden_constant_change": true
+  },
+  "repair_policy": {
+    "max_attempts": 1,
+    "allowed": [
+      "logistic_softening",
+      "fallback_L"
+    ],
+    "forbidden": [
+      "change_z_ref"
+    ]
+  },
+  "alarm_policy": {
+    "z_ref_tolerance": 0.08,
+    "chi_upper_guard": 1000000000000.0,
+    "dead_data_variance_floor": 1e-09
+  }
+}

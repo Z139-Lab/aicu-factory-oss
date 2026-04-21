@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AICU Dataset Record",
+  "type": "object",
+  "required": [
+    "experiment_id",
+    "model",
+    "topology",
+    "stress",
+    "runs",
+    "collapse_prob",
+    "cascade_size_mean",
+    "cascade_size_std",
+    "ci_95",
+    "config",
+    "environment",
+    "validity"
+  ],
+  "properties": {
+    "experiment_id": {"type": "string"},
+    "model": {"type": "string"},
+    "topology": {"type": "string"},
+    "stress": {"type": "number"},
+    "runs": {"type": "integer"},
+    "collapse_prob": {"type": "number"},
+    "cascade_size_mean": {"type": "number"},
+    "cascade_size_std": {"type": "number"},
+    "ci_95": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "items": {"type": "number"}
+    },
+    "config": {"type": "object"},
+    "environment": {"type": "object"},
+    "validity": {"type": "object"}
+  }
+}
